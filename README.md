@@ -5,3 +5,11 @@ Este projeto está sendo desenvolvido durante o bootcamp HTML Web Developer, rea
 ## Gif!
 
 ![gif-deskop](./img/gif-desktop.gif)
+
+## To do list (Próximos passos)
+
+- Adicionar um placar para marcar o score atingido
+- Um timer 
+- Melhorar o visual
+- Opção de reiniciar o jogo após game-over (um botão talvez?)
+- colocar alguma trilha sonora da fundo
