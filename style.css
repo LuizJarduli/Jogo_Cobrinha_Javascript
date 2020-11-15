@@ -10,5 +10,49 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(6, 94, 6);
+    background-color: #141414;
+}
+
+body h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 7px;
+    background-color: rgb(36, 108, 175);
+    width: 512px;
+    color: honeydew;
+    text-align: center;
+}
+
+#snake {
+    border: 5px dashed #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+}
+
+#placar {
+    padding: 10px;
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 3px 4px 0 #000;
+}
+
+#recorde {
+    padding: 10px;
+    width: 170px;
+    height: 30px;
+    color: white;
+    background-color: rgb(212, 198, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 3px 4px 0 #000;
 }
