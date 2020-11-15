@@ -12,5 +12,5 @@ Este projeto está sendo desenvolvido durante o bootcamp HTML Web Developer, rea
 - Adicionar marcador de recordes (high scores) :heavy_check_mark:
 - Um timer 
 - Melhorar o visual
-- Opção de reiniciar o jogo após game-over (um botão talvez?)
+- Opção de reiniciar o jogo após game-over :heavy_check_mark:
 - colocar alguma trilha sonora da fundo
