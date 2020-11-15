@@ -3,6 +3,8 @@ let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
 let snake = [];
+let num = 0;
+let maiorPlacar = 0;
 snake[0] = {
     x: 8 * box,
     y: 8 * box
@@ -14,8 +16,8 @@ let food = {
 }
 
 function criarBG() {
-    context.fillStyle = "lightgreen";
-    context.fillRect(0, 0, 16 * box, 16 * box); // 4 parâmetros sendo 1: posicao horizontal, 2: posicao vertical, 3:altura, 4:largura
+    context.fillStyle = "lightblue";
+    context.fillRect(0, 0, 32 * box, 32 * box); // 4 parâmetros sendo 1: posicao horizontal, 2: posicao vertical, 3:altura, 4:largura
 }
 
 function criarCobrinha() {
@@ -39,6 +41,14 @@ function update(event) {
     if (event.keyCode == 40 && direction != "down") direction = "up";
 }
 
+function incrementaPlacar() {
+    document.getElementById("placar").innerText = "Placar : " + num;
+}
+
+function VerificaSeBateuRecorde() {
+    document.getElementById("recorde").innerText = "Recorde : " + maiorPlacar;
+}
+
 function iniciarJogo() {
 
     if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
@@ -50,12 +60,18 @@ function iniciarJogo() {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
             clearInterval(jogo);
             alert('Game Over :(');
+            num = 0;
         }
     }
 
     criarBG();
     criarCobrinha();
     drawFood();
+    incrementaPlacar();
+    if (num > maiorPlacar) {
+        maiorPlacar = num;
+        VerificaSeBateuRecorde();
+    }
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -70,6 +86,7 @@ function iniciarJogo() {
     } else {
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
+        num++;
     }
 
 
